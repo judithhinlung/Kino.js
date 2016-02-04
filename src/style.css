@@ -1,0 +1,18 @@
+#container {
+    font-family: Adobe Caslon Pro, serif;
+    font-size: 16pt;
+    width: 500px;
+    margin: 10px auto;
+}
+
+.code {
+    font-family: Courier New, monospace;
+    font-size: 12pt;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+a, a:hover, a:visited {
+    color: black;
+}
