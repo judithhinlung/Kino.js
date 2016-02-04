@@ -4,7 +4,7 @@
 /*
     Global
 */
-var mp3dir = "../layers%20Project/stems/"
+var mp3dir = "../mp3/stems/"
 var current_theme = "diss";
 
 /*
@@ -21,39 +21,39 @@ var disstheme_transitionBeats = [disstheme_transition_A1, disstheme_transition_A
 
 // Loop objects
 var disstheme_violin1 = new Kino.Loop(
-    mp3dir + "disstheme init violin1.wav",
-    mp3dir + "disstheme loop violin1.wav",
+    mp3dir + "disstheme init violin1.mp3",
+    mp3dir + "disstheme loop violin1.mp3",
     [
-        {url: mp3dir + "disstheme tailA violin1.wav", beats: [disstheme_transition_A1, disstheme_transition_A2]},
-        {url: mp3dir + "disstheme tailB violin1.wav", beats: [disstheme_transition_B]},
-        {url: mp3dir + "disstheme tailC violin1.wav", beats: [disstheme_transition_C]}
+        {url: mp3dir + "disstheme tailA violin1.mp3", beats: [disstheme_transition_A1, disstheme_transition_A2]},
+        {url: mp3dir + "disstheme tailB violin1.mp3", beats: [disstheme_transition_B]},
+        {url: mp3dir + "disstheme tailC violin1.mp3", beats: [disstheme_transition_C]}
     ]
 );
 var disstheme_violin2 = new Kino.Loop(
-    mp3dir + "disstheme init violin2.wav",
-    mp3dir + "disstheme loop violin2.wav",
+    mp3dir + "disstheme init violin2.mp3",
+    mp3dir + "disstheme loop violin2.mp3",
     [
-        {url: mp3dir + "disstheme tailA violin2.wav", beats: [disstheme_transition_A1, disstheme_transition_A2]},
-        {url: mp3dir + "disstheme tailB violin2.wav", beats: [disstheme_transition_B]},
-        {url: mp3dir + "disstheme tailC violin2.wav", beats: [disstheme_transition_C]}
+        {url: mp3dir + "disstheme tailA violin2.mp3", beats: [disstheme_transition_A1, disstheme_transition_A2]},
+        {url: mp3dir + "disstheme tailB violin2.mp3", beats: [disstheme_transition_B]},
+        {url: mp3dir + "disstheme tailC violin2.mp3", beats: [disstheme_transition_C]}
     ]
 );
 var disstheme_viola = new Kino.Loop(
-    mp3dir + "disstheme init viola.wav",
-    mp3dir + "disstheme loop viola.wav",
+    mp3dir + "disstheme init viola.mp3",
+    mp3dir + "disstheme loop viola.mp3",
     [
-        {url: mp3dir + "disstheme tailA viola.wav", beats: [disstheme_transition_A1, disstheme_transition_A2]},
-        {url: mp3dir + "disstheme tailB viola.wav", beats: [disstheme_transition_B]},
-        {url: mp3dir + "disstheme tailC viola.wav", beats: [disstheme_transition_C]}
+        {url: mp3dir + "disstheme tailA viola.mp3", beats: [disstheme_transition_A1, disstheme_transition_A2]},
+        {url: mp3dir + "disstheme tailB viola.mp3", beats: [disstheme_transition_B]},
+        {url: mp3dir + "disstheme tailC viola.mp3", beats: [disstheme_transition_C]}
     ], 1
 );
 var disstheme_cello = new Kino.Loop(
-    mp3dir + "disstheme init cello.wav",
-    mp3dir + "disstheme loop cello.wav",
+    mp3dir + "disstheme init cello.mp3",
+    mp3dir + "disstheme loop cello.mp3",
     [
-        {url: mp3dir + "disstheme tailA cello.wav", beats: [disstheme_transition_A1, disstheme_transition_A2]},
-        {url: mp3dir + "disstheme tailB cello.wav", beats: [disstheme_transition_B]},
-        {url: mp3dir + "disstheme tailC cello.wav", beats: [disstheme_transition_C]}
+        {url: mp3dir + "disstheme tailA cello.mp3", beats: [disstheme_transition_A1, disstheme_transition_A2]},
+        {url: mp3dir + "disstheme tailB cello.mp3", beats: [disstheme_transition_B]},
+        {url: mp3dir + "disstheme tailC cello.mp3", beats: [disstheme_transition_C]}
     ], 1
 );
 
@@ -78,9 +78,9 @@ var kinotheme_bpm = "BPM" + 170 + " L4";
 var kinotheme_timesig = 76;
 var kinotheme_transitionBeats = [0,10,20,30,40,50,60,70];
 
-var kinotheme_piano = new Kino.Loop(mp3dir + "kinotheme init piano.wav", mp3dir + "kinotheme loop piano.wav", [{url: mp3dir + "kinotheme tail piano.wav", beats: [0]}]);
+var kinotheme_piano = new Kino.Loop(mp3dir + "kinotheme init piano.mp3", mp3dir + "kinotheme loop piano.mp3", [{url: mp3dir + "kinotheme tail piano.mp3", beats: [0]}]);
 var kinotheme_vox = new Kino.Loop(
-    mp3dir + "kinotheme vox.wav", mp3dir + "kinotheme vox.wav", [{url: mp3dir + "empty.wav", beats: [0]}],
+    mp3dir + "kinotheme vox.mp3", mp3dir + "kinotheme vox.mp3", [{url: mp3dir + "empty.mp3", beats: [0]}],
     0);
 var kinotheme_arr = [kinotheme_piano, kinotheme_vox];
 
@@ -134,26 +134,26 @@ var conductor = new Kino.Conductor(disstheme_bpm, loop_timesig, disstheme_transi
 // }, 100);
 
 
-/*
-    Scroll control!
-*/
-var scroll = 0;
-$(window).scroll(function(event) {
-    scroll = $(window).scrollTop();
-    console.log ("scroll is " + scroll);
-    if (scroll > 1500) {
-        if (current_theme != "kino") {
-            toKinotheme();
-            console.log("-> kino");
-        }
-    }
-    else {
-        if (current_theme != "diss") {
-            toDisstheme();
-            console.log("-> diss");
-        }
-    }
-});
+// /*
+//     Scroll control!
+// */
+// var scroll = 0;
+// $(window).scroll(function(event) {
+//     scroll = $(window).scrollTop();
+//     console.log ("scroll is " + scroll);
+//     if (scroll > 1500) {
+//         if (current_theme != "kino") {
+//             toKinotheme();
+//             console.log("-> kino");
+//         }
+//     }
+//     else {
+//         if (current_theme != "diss") {
+//             toDisstheme();
+//             console.log("-> diss");
+//         }
+//     }
+// });
 
 // // For testing; uncomment for production
 // })();

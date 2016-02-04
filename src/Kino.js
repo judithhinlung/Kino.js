@@ -1,6 +1,6 @@
 var Kino = (function(ae) {
 /*
-    Conductor object. A glorified Metronome.
+    Conductor object.
 
     Input vars:
     - bpm = beats per minute (tempo), in formats:
